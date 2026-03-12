@@ -1,0 +1,343 @@
+@import '../../assets/css/variables.css';
+
+/* Dashboard Cards */
+.companyInfoCard{
+  border: 0;
+  box-shadow: 0 0 20px #00000017;
+  border-radius: 10px;
+}
+.companyInfoCard .card-body{
+  padding: 20px;
+}
+.dashboardCardMain{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.dashboard-card {
+  position: relative;
+  border-radius: 10px;
+  padding: 26px 22px 22px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+}
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: -28px;
+  right: -28px;
+  filter: blur(38px);
+  opacity: 0.25;
+  transition: opacity 0.3s;
+}
+
+.dashboard-card:hover::before { 
+  opacity: 0.5; 
+}
+
+.dashboard-card::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  height: 3px;
+  border-radius: 24px 24px 0 0;
+}
+
+.dashboard-card .icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.dashboard-card h6 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.dashboard-card h3 {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.dashboard-card i {
+  font-size: 22px;
+}
+
+.dashboard-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* GATC - Blue */
+.card-draft { 
+  box-shadow: 0 4px 14px rgba(99,120,255,0.1); 
+}
+.card-draft::before { 
+  background: #6378ff; 
+}
+.card-draft::after { 
+  background: linear-gradient(90deg, #6378ff, transparent); 
+}
+.card-draft .icon-wrap { 
+  background: #eef0ff; 
+  color: #6378ff; 
+}
+.card-draft h6 { 
+  color: #6378ff; 
+}
+.card-draft h3 { 
+  color: #1a1f3a; 
+}
+
+/* Appeal - Purple */
+.card-submitted { 
+  box-shadow: 0 4px 14px rgba(160,100,255,0.1); 
+}
+.card-submitted::before { 
+  background: #a064ff; 
+}
+.card-submitted::after { 
+  background: linear-gradient(90deg, #a064ff, transparent); 
+}
+.card-submitted .icon-wrap { 
+  background: #f3eeff; 
+  color: #a064ff; 
+}
+.card-submitted h6 { 
+  color: #a064ff; 
+}
+.card-submitted h3 { 
+  color: #1a1f3a; 
+}
+
+/* Notice - Red */
+.card-rejected { 
+  box-shadow: 0 4px 14px rgba(255,90,90,0.1); 
+}
+.card-rejected::before { 
+  background: #ff5a5a; 
+}
+.card-rejected::after { 
+  background: linear-gradient(90deg, #ff5a5a, transparent); 
+}
+.card-rejected .icon-wrap { 
+  background: #fff0f0; 
+  color: #ff5a5a; 
+}
+.card-rejected h6 { 
+  color: #ff5a5a; 
+}
+.card-rejected h3 { 
+  color: #1a1f3a; 
+}
+
+/* Enforcement - Orange */
+.card-pending { 
+  box-shadow: 0 4px 14px rgba(255,140,50,0.1); 
+}
+.card-pending::before { 
+  background: #ff8c32; 
+}
+.card-pending::after { 
+  background: linear-gradient(90deg, #ff8c32, transparent); 
+}
+.card-pending .icon-wrap { 
+  background: #fff4ea; 
+  color: #ff8c32; 
+}
+.card-pending h6 { 
+  color: #ff8c32; 
+}
+.card-pending h3 { 
+  color: #1a1f3a; 
+}
+
+/* Certificate - Green */
+.card-issued { 
+  box-shadow: 0 4px 14px rgba(40,200,120,0.1); 
+}
+.card-issued::before { 
+  background: #28c878; 
+}
+.card-issued::after { 
+  background: linear-gradient(90deg, #28c878, transparent); 
+}
+.card-issued .icon-wrap { 
+  background: #edfff5; 
+  color: #28c878; 
+}
+.card-issued h6 { 
+  color: #28c878; 
+}
+.card-issued h3 { 
+  color: #1a1f3a; 
+}
+
+/* Page Header & Breadcrumb */
+.page-header {
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb-text {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.title-fm {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.tile-m-less {
+  margin-bottom: 0 !important;
+}
+
+/* Box Container */
+.box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+}
+
+/* Table Styles */
+.table-box .title-fm {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.custom-table thead {
+  background-color: #f1f3f5;
+  font-weight: 600;
+}
+
+.custom-table th {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.custom-table td {
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.table-box .btn-info {
+  background-color: #0dcaf0;
+  border: none;
+  color: #fff;
+}
+
+.table-box .btn-success {
+  background-color: #198754;
+  border: none;
+}
+
+.table-box .btn-warning {
+  background-color: #fd7e14;
+  border: none;
+  color: #fff;
+}
+
+.table-box .btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+/* Pagination */
+.table-box .custom-pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.table-box .pagination .page-link {
+  color: #333;
+  font-size: 13px;
+}
+
+.table-box .page-header {
+  border-bottom: 2px solid #cfd8dc;
+  padding-bottom: 10px;
+}
+.table-box .form-group {
+    margin-bottom: 0;
+}
+
+.table-box .custom-btn{
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 6px 20px;
+}
+
+/* Certificate Card Styles */
+.cretificate-card {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: 0 0 20px #0000001a;
+}
+
+.cretificate-card .card-header {
+  background: #2d2d6f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+}
+
+.cretificate-card .card-body {
+  margin-bottom: 0;
+  padding: 20px 20px 8px;
+}
+.cretificate-card .card-body h2{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color:var(--color-primary)
+}
+
+.cretificate-card .card-body [class*="col-"] {
+  margin-bottom: 1rem;
+}
+
+.cretificate-card .form-group {
+  margin-bottom: 0;
+}
+
+
+/* Custom input for dashboard  */
+.input-wrap input {background: #fff;border-color: #aaaa;}
+.input-wrap input:focus {background: #fff;border-color: var(--color-primary);box-shadow: none;}
+.form-part .input-wrap select, .form-part .textarea-wrap textarea {border: 1px solid #aaaa;background-color: #fff;margin-top: 0;}
+.field-label{font-size: 14px;font-weight: 500!important;margin-bottom: 4px;display: block;color: #323232!important;text-transform: capitalize;}
+.form-check-inline input[type="checkbox"] {height: 14px;border-radius: 0;border-color: var(--color-primary);margin: 3px 8px 0 0px;}
+.form-part .form-group label{font-weight: 500;}
+.form-check-input:checked{background-color: var(--color-primary);border-color: var(--color-primary);}
+.form-check-input:focus, .form-check-input:focus {box-shadow: none;}
+.modal-header{background: var(--color-primary);color: #fff;border-bottom: none;}
+.modal-header .btn-close{filter: invert(1);opacity: 1;}
+.modal-body{padding: 15px 30px;}

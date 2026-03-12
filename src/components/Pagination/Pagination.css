@@ -1,0 +1,92 @@
+@import '../../assets/css/variables.css';
+
+.custom-pagination-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.custom-pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.custom-pagination .page-item {
+  display: inline-block;
+}
+
+.custom-pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0.5rem 0.75rem;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  user-select: none;
+}
+
+.custom-pagination .page-link:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border-color: var(--gold);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-pagination .page-item.active .page-link {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)!important;
+  border-color: var(--color-primary)!important;
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 2px 6px rgba(45, 45, 111, 0.3);
+}
+
+.custom-pagination .page-item.active .page-link:hover {
+  transform: none;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-color: var(--color-primary);
+}
+
+.custom-pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.custom-pagination .page-link:disabled {
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.custom-pagination .page-link:disabled:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  color: #6c757d;
+}
+
+.custom-pagination .page-item.disabled .page-link:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  color: #6c757d;
+}

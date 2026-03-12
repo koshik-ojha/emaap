@@ -1,0 +1,106 @@
+@import '../../assets/css/variables.css';
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.field-label {
+  display: block;
+  font-size: var(--font-size-md);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 5px;
+}
+
+.req { 
+  color: var(--color-rust); 
+  margin-left: 1px; 
+}
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.input-wrap input {
+  width: 100%;
+  background: var(--color-gold-pale);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-light);
+  padding: var(--spacing-sm) 14px;
+  outline: none;
+  transition: border-color var(--transition-base), background var(--transition-base), box-shadow var(--transition-base);
+  appearance: none;
+  border-radius: 0;
+  border-color: var(--color-gold);
+}
+
+.input-wrap input::placeholder { 
+  color: #9a8f7e; 
+}
+
+.input-wrap input:focus {
+  border-color: var(--color-gold);
+  background: #FFFBF2;
+  box-shadow: var(--shadow-focus);
+}
+
+.input-wrap input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input.with-verify { 
+  padding-right: 50px; 
+}
+
+.btn-verify {
+  position: absolute;
+  right: 10px; 
+  top: 0; 
+  bottom: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #323232; 
+  font-size: var(--font-size-xs);
+  letter-spacing: 0;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  flex-shrink: 0;
+}
+
+.btn-verify:hover { 
+  color: var(--color-gold);
+}
+
+.eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  display: flex;
+  padding: 4px;
+}
+
+.eye-btn:hover { 
+  color: var(--color-gold); 
+}
+
+input[type="password"] { 
+  padding-right: 42px; 
+}
+
+

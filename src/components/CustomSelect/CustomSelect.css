@@ -1,0 +1,64 @@
+@import '../../assets/css/variables.css';
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.field-label {
+  display: block;
+  font-size: var(--font-size-md);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 5px;
+}
+
+.req { 
+  color: var(--color-rust); 
+  margin-left: 1px; 
+}
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.input-wrap select {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-light);
+  padding: var(--spacing-sm) 14px;
+  outline: none;
+  appearance: none;
+  border-radius: 0;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23aaa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  background-size: 10px 6px;
+}
+
+
+.form-part .input-wrap select {
+  border-radius: 0;
+  padding: 6px var(--spacing-md);
+  font-size: var(--font-size-md);
+  box-shadow: none !important;  
+  height: 40px;
+  color: var(--color-text-dark);
+  line-height: 28px;
+  margin-top: var(--spacing-md);
+}
+
+.form-part .input-wrap select:focus, .form-select:focus {
+  border-color: var(--color-primary-dark);
+  background-color: transparent;
+  box-shadow: none;
+}

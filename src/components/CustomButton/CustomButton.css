@@ -1,0 +1,167 @@
+@import '../../assets/css/variables.css';
+
+.custom-btn {
+  cursor: pointer;
+  transition: all var(--transition-slow);
+  border: none;
+  font-family: var(--font-family-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.custom-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.custom-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Primary Button - Filled */
+.btn-primary,
+.btn-signup {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  letter-spacing: 0;
+  margin-top: 5px;
+  margin-bottom: var(--spacing-md);
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:not(.btn-sm),
+.btn-signup:not(.btn-sm) {
+  width: 100%;
+}
+
+.btn-primary:hover:not(:disabled),
+.btn-signup:hover:not(:disabled) {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+/* Primary Button - Outline */
+.btn-primary-outline {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: var(--font-size-2xl);
+  letter-spacing: 0;
+  
+  margin-top: 5px;
+  margin-bottom: var(--spacing-md);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary-outline:not(.btn-sm) {
+  width: 100%;
+}
+
+.btn-primary-outline:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Secondary Button - Filled */
+.btn-secondary {
+  padding: 9px 22px;
+  background-color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  letter-spacing: 0;
+  
+  font-weight: var(--font-weight-medium);
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Secondary Button - Outline */
+.btn-secondary-outline,
+.btn-signin {
+  padding: 9px 22px;
+  background-color: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0;
+  
+  font-weight: var(--font-weight-medium);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary-outline:hover:not(:disabled),
+.btn-signin:hover:not(:disabled) {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+/* Legacy Outline Button (backward compatibility) */
+.btn-outline {
+  padding: var(--spacing-md) 24px;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: var(--font-size-normal);
+  letter-spacing: 0.5px;
+  
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Full Width */
+.btn-full-width {
+  width: 100%;
+}
+
+/* Small Button */
+.btn-sm {
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  width: auto !important;
+  min-width: auto !important;
+  margin: 0 !important;
+  text-transform: none !important;
+}
+
+.btn-sm.btn-primary,
+.btn-sm.btn-signup,
+.btn-sm.btn-primary-outline {
+  border-width: 1px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn-sm.btn-secondary,
+.btn-sm.btn-secondary-outline,
+.btn-sm.btn-signin {
+  padding: 6px 12px !important;
+}
+
+/* Button variations for forms */
+.form-button-group {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.form-button-group .custom-btn {
+  flex: 1;
+}

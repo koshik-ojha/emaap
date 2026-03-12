@@ -1,0 +1,7 @@
+@import './assets/css/variables.css';
+@import './assets/css/page.css';
+@import './assets/css/page-responsive.css';
+
+code {
+  font-family: var(--font-family-monospace);
+}

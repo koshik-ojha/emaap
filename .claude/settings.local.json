@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /c/wamp64/www/emapp/src/pages/Dashboard/InstrumentType/*.tsx)",
+      "Bash(mkdir -p /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/InstrumentType && mkdir -p /c/wamp64/www/emapp/src/pages/Dashboard/GATC && mkdir -p /c/wamp64/www/emapp/src/pages/Dashboard/Appeal && mkdir -p /c/wamp64/www/emapp/src/pages/Dashboard/Notice && mkdir -p /c/wamp64/www/emapp/src/pages/Dashboard/Enforcement)",
+      "Bash(cp /c/wamp64/www/emapp/src/pages/Dashboard/CertificateList.tsx /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/CertificateList.tsx && cp /c/wamp64/www/emapp/src/pages/Dashboard/AddCertificate.tsx /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/AddCertificate.tsx && cp /c/wamp64/www/emapp/src/pages/Dashboard/CertificateView.tsx /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/CertificateView.tsx && cp /c/wamp64/www/emapp/src/pages/Dashboard/Certificate.css /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/Certificate.css && cp /c/wamp64/www/emapp/src/pages/Dashboard/InstrumentType/*.tsx /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/InstrumentType/ && cp /c/wamp64/www/emapp/src/pages/Dashboard/InstrumentType/index.ts /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/InstrumentType/index.ts)",
+      "Bash(grep -n \"components\" /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/InstrumentType/*.tsx | head -20)",
+      "Bash(grep -n \"components\" /c/wamp64/www/emapp/src/pages/Dashboard/CertificateIssued/InstrumentType/*.tsx)"
+    ]
+  }
+}

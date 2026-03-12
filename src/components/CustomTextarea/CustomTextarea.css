@@ -1,0 +1,86 @@
+@import '../../assets/css/variables.css';
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.field-label {
+  display: block;
+  font-size: var(--font-size-md);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 5px;
+}
+
+.req { 
+  color: var(--color-rust); 
+  margin-left: 1px; 
+}
+
+.textarea-wrap {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.textarea-wrap textarea {
+  width: 100%;
+  background: var(--color-gold-pale);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-light);
+  padding: var(--spacing-sm) 14px;
+  outline: none;
+  transition: border-color var(--transition-base), background var(--transition-base), box-shadow var(--transition-base);
+  appearance: none;
+  border-radius: 0;
+  border-color: var(--color-gold);
+  resize: vertical;
+}
+
+.textarea-wrap textarea::placeholder { 
+  color: #9a8f7e; 
+}
+
+.textarea-wrap textarea:focus {
+  border-color: var(--color-gold);
+  background: #FFFBF2;
+  box-shadow: var(--shadow-focus);
+}
+
+.textarea-wrap textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Part Styling (for dashboard pages) */
+.form-part .form-group label {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-normal);
+}
+
+.form-part .textarea-wrap textarea {
+  border: none;
+  border-bottom: 3px solid var(--color-border-dark);
+  border-radius: 0;
+  padding: 6px var(--spacing-md);
+  font-size: var(--font-size-md);
+  box-shadow: none !important;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text-dark);
+  line-height: 28px;
+  appearance: auto;
+  margin-top: var(--spacing-md);
+}
+
+.form-part .textarea-wrap textarea:focus {
+  border-color: var(--color-primary-dark);
+  background: transparent;
+  box-shadow: none;
+}

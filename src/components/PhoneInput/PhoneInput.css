@@ -1,0 +1,45 @@
+@import '../../assets/css/variables.css';
+
+.phone-wrap { 
+  display: flex; 
+}
+
+.phone-prefix {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: var(--spacing-sm) 10px;
+  /* background: #f2f2f2; */
+  border: 1px solid #aaa;
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.phone-prefix .code { 
+  font-weight: var(--font-weight-medium); 
+  font-size: var(--font-size-base); 
+}
+
+.phone-wrap .input-wrap { 
+  flex: 1; 
+}
+
+.phone-wrap input { 
+  border-left: none; 
+}
+
+/* Form Part Styling (for dashboard pages) */
+.form-part .phone-wrap .input-wrap input {
+  border: none;
+  border-bottom: 3px solid var(--color-border-dark);
+  border-left: none;
+}
+
+.form-part .phone-prefix {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid var(--color-border-dark);
+  padding: 6px var(--spacing-md);
+}

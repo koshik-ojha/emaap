@@ -1,0 +1,259 @@
+@import './variables.css';
+
+/* ===== Responsive Styles for All Pages ===== */
+
+/* Tablet and Below (max-width: 991px) */
+@media (max-width: 991px) {
+  /* Sidebar */
+  .sidebar {
+    margin-left: -260px;
+  }
+
+  .sidebar.show {
+    margin-left: 0;
+  }
+
+  /* Content */
+  .content {
+    margin-left: 0;
+  }
+
+  /* Login/Signup Card */
+  .login_section .card {
+    width: 90%;
+  }
+
+  .card-inner {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+    float: none;
+    padding: var(--spacing-xl);
+  }
+
+  /* Header */
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .header {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  /* Form sections */
+  .sign_in_form .right {
+    padding: var(--spacing-2xl);
+  }
+
+  /* Dashboard cards */
+  .dashboard-card {
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Login/Signup Card */
+  .login_section .card {
+    width: 95%;
+    margin: var(--spacing-xl);
+  }
+
+  .left, .right {
+    padding: var(--spacing-lg);
+  }
+
+  .left img {
+    width: 150px;
+  }
+
+  /* Header */
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: var(--font-size-base);
+  }
+
+  .header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Card Bottom */
+  .card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .btn-signin {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Form Part */
+  .form-part {
+    padding: var(--spacing-md);
+  }
+
+  .title-fm {
+    font-size: var(--font-size-3xl);
+  }
+
+  /* Tables */
+  .custom-table {
+    font-size: var(--font-size-sm);
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: var(--spacing-sm);
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 100%;
+    margin-left: -100%;
+  }
+
+  .sidebar.show {
+    margin-left: 0;
+  }
+
+  /* Topbar */
+  .topbar {
+    padding: var(--spacing-md);
+  }
+
+  .dropdown-toggle span {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Small Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  /* Login Card */
+  .login_section {
+    padding: var(--spacing-md);
+  }
+
+  .login_section .card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .left, .right {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .left img {
+    width: 120px;
+  }
+
+  /* Header */
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Form Meta */
+  .form-meta a,
+  .sign_in_form .form-meta a {
+    font-size: var(--font-size-md);
+  }
+
+  /* Title */
+  .title-fm {
+    font-size: var(--font-size-2xl);
+  }
+
+  .section-title h2 {
+    font-size: var(--font-size-normal);
+  }
+
+  /* Certificate Card */
+  .cretificate-card .card-header {
+    font-size: var(--font-size-normal);
+    padding: var(--spacing-sm);
+  }
+
+  .cretificate-card .card-body {
+    padding: var(--spacing-sm);
+  }
+
+  /* Tables - Make scrollable on small screens */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .custom-table {
+    min-width: 600px;
+  }
+
+  /* Buttons */
+  .btn,
+  .custom-btn {
+    font-size: var(--font-size-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  /* Dashboard Cards */
+  .dashboard-card {
+    padding: var(--spacing-md);
+  }
+
+  .dashboard-card i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .left img {
+    width: 100px;
+  }
+
+  .form-part {
+    padding: var(--spacing-sm);
+  }
+
+  /* Make all buttons full width on very small screens */
+  .btn,
+  .custom-btn,
+  .btn-signin,
+  .btn-signup {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .sidebar,
+  .topbar,
+  .btn,
+  .custom-btn {
+    display: none !important;
+  }
+
+  .content {
+    margin-left: 0 !important;
+  }
+
+  .login_section .card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
