@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CustomButton, CustomInput, Pagination } from '../../../components';
+import { CustomButton, CustomInput, FilterPanel, FilterConfig, Pagination } from '../../../components';
 import '../Dashboard.css';
 
 interface Certificate {
@@ -36,6 +36,35 @@ const CertificateList: React.FC = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [showFilter, setShowFilter] = useState<boolean>(false);
+  const [filterValues, setFilterValues] = useState<Record<string, string>>({});
+
+  const certificateFilters: FilterConfig[] = [
+    {
+      key: 'applicationNo',
+      label: 'Application No',
+      options: [
+        { label: 'GATC/2025/01', value: 'GATC/2025/01' },
+        { label: 'GATC/2025/07', value: 'GATC/2025/07' },
+      ],
+    },
+    {
+      key: 'certificateNo',
+      label: 'Certificate No',
+      options: [
+        { label: 'IND/GATC/PB/25/01/26/05', value: 'IND/GATC/PB/25/01/26/05' },
+        { label: 'IND/GATC/TN/25/02/26/03', value: 'IND/GATC/TN/25/02/26/03' },
+      ],
+    },
+    {
+      key: 'instrument',
+      label: 'Instrument',
+      options: [
+        { label: 'Tape Measures', value: 'Tape Measures' },
+        { label: 'Non-automatic weighing instruments (upto 150kg)', value: 'Non-automatic weighing instruments (upto 150kg)' },
+      ],
+    },
+  ];
   const totalPages = 5;
 
   const certificates: Certificate[] = [
@@ -103,7 +132,13 @@ const CertificateList: React.FC = () => {
 
   const handleReset = () => {
     setSearchTerm('');
+    setFilterValues({});
+    setShowFilter(false);
     setCurrentPage(1);
+  };
+
+  const handleFilterToggle = () => {
+    setShowFilter(prev => !prev);
   };
 
   const handleAddCertificate = () => {
@@ -147,6 +182,13 @@ const CertificateList: React.FC = () => {
               >
                 Search
               </CustomButton>
+              <CustomButton
+                variant="primary"
+                className='m-0 w-auto'
+                onClick={handleFilterToggle}
+              >
+                <i className="bi bi-funnel me-1"></i> Filter
+              </CustomButton>
               <CustomButton 
                 variant="secondary" 
                 onClick={handleReset}
@@ -165,6 +207,14 @@ const CertificateList: React.FC = () => {
             </CustomButton>
           </div>
         </div>
+
+        <FilterPanel
+          show={showFilter}
+          filters={certificateFilters}
+          values={filterValues}
+          onChange={(key, value) => setFilterValues(prev => ({ ...prev, [key]: value }))}
+          onClear={() => setFilterValues({})}
+        />
 
         <div className="table-responsive">
           <table className="table table-bordered table-hover custom-table">

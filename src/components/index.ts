@@ -9,3 +9,5 @@ export { default as Sidebar } from './Sidebar';
 export { default as Topbar } from './Topbar';
 export { default as DashboardLayout } from './DashboardLayout';
 export { default as Pagination } from './Pagination';
+export { default as FilterPanel } from './FilterPanel';
+export type { FilterConfig } from './FilterPanel';
